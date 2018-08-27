@@ -1,0 +1,27 @@
+{
+  "name": "automed-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jade": "^1.11.0",
+    "mssql": "^4.1.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/be7z/delta2018-automed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/be7z/delta2018-automed/issues"
+  },
+  "homepage": "https://github.com/be7z/delta2018-automed#readme"
+}
