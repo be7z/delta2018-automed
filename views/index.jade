@@ -1,0 +1,26 @@
+extends layout
+
+block home
+ div(align='center')
+  label Total： #{data.length}
+  hr
+  a(href="/add", title="title").btn Add
+  table.list
+    thead
+      tr
+        th PatientID
+        th PatientRoom
+        th PatientFirstname
+        th PatientLastname
+        th
+    each item in data
+      tr
+        td= item.ID
+        td= item.PatientRoom
+        td= item.NameF
+        td= item.PatientLastname
+        td
+          a(href="/edit/#{item.ID}", title="Edit").icon
+            i(aria-hidden="true").fa.fa-pencil-square
+          a(href="/delete/#{item.ID}", title="Delete" onclick="return confirm('Delete user： #{item.NameF} ?');").icon
+            i(aria-hidden="true").fa.fa-trash

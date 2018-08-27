@@ -1,0 +1,60 @@
+body {
+  background-image:url("../../assets/img/hero.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  font-family:Montserrat, sans-serif;
+  height:100vh;
+}
+
+@media (max-width: 767px) {
+  body {
+    height:100%;
+  }
+}
+
+body, .form-control, .btn, .form-control:focus {
+  font-size:14px;
+  color:#FFF;
+}
+
+@media (max-width: 575px) {
+  body, .form-control, .btn, .form-control:focus {
+    font-size:12px;
+    color:#fff;
+  }
+}
+
+.card {
+  color:rgba(33,75,183,0.85);
+  background:#ffffff none repeat scroll 0 0;
+  padding:20px;
+  border:0 solid #e7e7e7;
+  border-radius:5px;
+  box-shadow:0 5px 20px 0 rgba(0,0,0,0.15);
+  margin:5px;
+}
+
+.card-body {
+  padding:0;
+}
+
+.table tbody tr td {
+  padding:0.5rem;
+  border-bottom:1px solid #e7e7e7;
+}
+
+.badge {
+  font-weight:800;
+  vertical-align:middle;
+  border:0px;
+}
+
+.badge-success {
+  background-color:#26dad2;
+}
+
+.badge-warning {
+  background-color:#ffb22b;
+}
+

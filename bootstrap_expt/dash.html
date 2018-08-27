@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>automed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/css/dash.css">
+    <link rel="stylesheet" href="assets/css/getPatient.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div id="modal-target" class="modal"></div>
+    <div class="dash">
+        <div class="dash-top"><span class="user-id card"><span id="userType">#{data.userType}</span><span class="user_id">##{data.userID}</span></span><span class="user-logout">SIGN OUT</span></div>
+        <div class="dash-flexWarp">
+            <div class="dash-profBorder">
+                <div class="dash-profPic" style="background-image:url(\'/assets/img/profPic/#{data.userID}.jpg\');"></div>
+            </div>
+            <div>
+                <div class="dash-flexWarp"><span class="dash-name">#{data.nameFirst}</span><span class="dash-name">#{data.nameLast}</span></div>
+                <div class="dash-flexWarp">
+                    <div class="dash-subFlex">
+                        <div><span>Birthday (YYYY-MM-DD): #{data.birthYear} #{data.birthMonth} #{data.birthDay}</span></div>
+                        <div><span class="dash-age">(Age: #{data.age} years)</span><span>Gender: #{data.gender}</span></div><span>Blood Group: #{data.bloodGroup}</span></div>
+                    <div class="dash-subFlex">
+                        <div class="dash-subTopic"><span>Contract</span></div>
+                        <div><span>#{data.addr}</span></div><span>#{data.mobileNum}</span></div>
+                    <div class="dash-subFlex">
+                        <div class="dash-subTopic"><span>Insurance</span></div>
+                        <div><span>#{data.insurStat}</span></div><span>#{data.insurName}</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="dash-report">
+            <div id="apptDash" class="dash-appoint card"><span class="dash-topic">Appointments<button class="btn btn-primary dash-reportBtnAdd" type="submit" id="btnAddAppt">Add</button></span>
+                <div id="calendar"></div>
+                <div class="table-responsive" id="apptTable">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-breakWord">#{appt.date}</td>
+                                <td>
+                                    <div class="dash-flexWarp"><span class="appt-topic">#{appt.topic}</span>
+                                        <div><span>#{appt.nameTitle} #{appt.nameLast}</span></div><span>#{appt.location}</span></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="txDash" class="dash-detail card"><span class="dash-topic">Recent Reports<button class="btn btn-primary dash-reportBtnAdd" type="submit" id="btnAdd">Add Report</button></span>
+                <div class="table-responsive" id="txTable">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Details (click for more)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-breakWord">#{rept.dateCreate}</td>
+                                <td>
+                                    <div class="dash-flexWarp" style="word-break:break-word;">
+                                        <div class="report-detail-pic">
+                                            <div class="dash-profPic" style="background-image:url(&quot;https://vignette.wikia.nocookie.net/marvelmovies/images/b/b5/Abraham_Erskine_01.jpg/revision/latest?cb=20131123220531&quot;);"></div>
+                                        </div>
+                                        <div>
+                                            <div><strong><span class="reportTopic1">#{rept.reportTopic}</span></strong></div><span>#{rept.nameTitle}&nbsp;</span><span>#{rept.nameFirst}</span>
+                                            <div class="modal-well text-truncate"><strong>Report ID&nbsp;</strong><span style="max-width:10px;">#{rept.reportID}</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge badge-success">#{rept.reportStat}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dash.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/modal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+extends layout
+
+block dash
+  #modal-target.modal
+  .dash
+    .dash-top
+      span.user-id.card
+        span#userType #{data.userType}
+        span.user_id ##{data.userID}
+      span.user-logout SIGN OUT
+    .dash-flexWarp
+      .dash-profBorder
+        .dash-profPic(style="background-image:url(\'/assets/img/profPic/#{data.userID}.jpg\');")
+      div
+        .dash-flexWarp
+          span.dash-name #{data.nameFirst}
+          span.dash-name #{data.nameLast}
+        .dash-flexWarp
+          .dash-subFlex
+            div
+              span Birthday (YYYY-MM-DD): #{data.birthYear} #{data.birthMonth} #{data.birthDay}
+            div
+              span.dash-age (Age: #{data.age} years)
+              span Gender: #{data.gender}
+            span Blood Group: #{data.bloodGroup}
+          .dash-subFlex
+            .dash-subTopic
+              span Contact
+            div
+              span #{data.addr}
+            span #{data.mobileNum}
+          .dash-subFlex
+            .dash-subTopic
+              span Insurance
+            div
+              span #{data.insurStat}
+            span #{data.insurName}
+    .dash-report
+      #apptDash.dash-appoint.card
+        span.dash-topic
+          | Appointments
+          button#btnAddAppt.btn.btn-primary.dash-reportBtnAdd(type='submit') Add
+        #calendar
+        #apptTable.table-responsive
+          table.table
+            thead
+              tr
+                th Date
+                th Details
+            if apptDataRows > 0
+              each appt in apptData
+                tr
+                  td.table-breakWord #{appt.date}
+                  td
+                    div
+                      span.appt-topic #{appt.topic}
+                      div
+                        span #{appt.nameTitle} #{appt.nameFirst}
+                      span #{appt.location}
+      #txDash.dash-detail.card
+        span.dash-topic
+          | Recent Reports
+          button#btnAdd.btn.btn-primary.dash-reportBtnAdd(type='submit') Add Report
+        #txTable.table-responsive
+          table.table
+            thead
+              tr
+                th #
+                th Details (click for more)
+                th Status
+            if txDataRows > 0
+              each rept in txData
+                tr
+                  td.table-breakWord #{rept.dateCreate}
+                  td
+                    .dash-flexWarp(style='word-break:break-word;')
+                      .report-detail-pic
+                        .dash-profPic(style='background-image:url("https://vignette.wikia.nocookie.net/marvelmovies/images/b/b5/Abraham_Erskine_01.jpg/revision/latest?cb=20131123220531");')
+                      div
+                        div
+                          strong
+                            span(class='report#{rept.reportID}') #{rept.reportTopic}
+                        span #{rept.nameTitle} 
+                        span #{rept.nameFirst}
+                        .modal-well.text-truncate
+                          strong Report ID 
+                          span(style='max-width:10px;') #{rept.reportID}
+                  td
+                    span(class='badge #{rept.reportStatStyle}') #{rept.reportStat}

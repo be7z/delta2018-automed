@@ -1,0 +1,26 @@
+@media (max-width: 575px) {
+  #btn-checkPatient {
+    width:100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .input-patientID {
+    width:150px;
+    min-width:150px;
+    max-width:150px;
+    padding:0px 5px;
+  }
+}
+
+@media (min-width: 576px) {
+  .div-patient {
+    display:flex;
+    margin-bottom:10PX;
+  }
+}
+
+#div-getPatientData {
+  padding:0px 10px;
+}
+

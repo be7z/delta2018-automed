@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>automed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/css/dash.css">
+    <link rel="stylesheet" href="assets/css/getPatient.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="modal modal-show">
+    <div id="target" class="modal-content">
+        <div><span class="close">X</span>
+            <div>
+                <p class="modal-topheader">Create Report</p>
+            </div>
+        </div><input type="text" placeholder="Report Topic" id="create-topic" class="form-control"><span class="modal-summary">For Patient ID</span>
+        <div id="div-patientTarget" class="div-patient">
+            <div class="div-patient">
+                <div class="input-patientID"><input type="text" placeholder="Patient ID" id="create-patientID" class="form-control"><button class="btn btn-primary" type="submit" id="btn-checkPatient">Check</button></div>
+                <div id="div-getPatientData"><strong><span class="d-block">Patient Name: #{patient.nameTitle} #{patient.nameFirst} #{patient.nameLast}</span></strong><span class="d-block">Age: #{patient.age} (Gender: #{patient.gender})</span><span class="d-block">Allergies: #{patient.allergies}</span></div>
+            </div>
+        </div><button class="btn btn-primary" type="submit">ADD</button></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dash.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/modal.js"></script>
+</body>
+
+</html>

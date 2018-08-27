@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="200" viewBox="0 0 800 200">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="239.75" y="30.094" width="79.406" height="79.469" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="AU_OMED_copy" data-name="AU OMED copy" class="cls-1" d="M43.288,168.547H54.274l8.935-24.975h45.628l8.789,24.975H128.54L90.162,65.058H81.739Zm23.071-33.691L85.987,79.12l19.7,55.736H66.359Zm115.722,34.79c24.975,0,37.133-15.234,37.133-40.722V65.058H209.18v63.207c0,20.361-8.056,31.64-27.1,31.64-18.9,0-26.879-11.133-26.879-31.274V65.058H145.168V129.73C145.168,154.631,157.179,169.646,182.081,169.646Zm197.7,0c32.446,0,47.533-24.682,47.533-52.88S412.231,63.96,379.785,63.96c-32.226,0-47.387,24.609-47.387,52.806S347.559,169.646,379.785,169.646Zm0-9.009c-25.781,0-36.84-20.141-36.84-43.871,0-23.657,11.059-43.871,36.84-43.871,26,0,36.986,20.214,36.986,43.871C416.771,140.5,405.785,160.637,379.785,160.637ZM530.3,65.058l-27.465,73.607L475.366,65.058H450.318V168.547h17.871V91.278l25.634,68.261H511.84l25.634-68.261v77.269h17.871V65.058H530.3Zm51.711,103.489h68.846V150.969H600.611V125.335h46.8V108.27h-46.8V82.123h50.243V65.058H582.008V168.547Zm91.186,0h29.882c34.79,0,53.979-18.749,53.979-50.975,0-33.618-18.6-52.514-53.832-52.514H673.194V168.547Zm18.6-17.065V82.123H702.93c25.488,0,35.522,10.107,35.522,34.643,0,25.854-14.356,34.716-37.207,34.716H691.8Z"/>
+  <path id="_copy" data-name="+ copy" class="cls-2" d="M274.48,109.56h10.052V74.845h34.637V64.794H284.532V30.079H274.48V64.794H239.765V74.845H274.48V109.56Z"/>
+</svg>

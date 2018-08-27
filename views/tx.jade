@@ -1,0 +1,74 @@
+extends layout
+
+block tx
+  #target.modal-content
+    div
+      span.close X
+      div
+        p.modal-topheader #{txData.reportTopic}
+        p.modal-header by #{txData.nameTitle} #{txData.nameFirst}
+    .modal-well.text-truncate
+      strong Report ID 
+      span #{txData.reportID}
+    .badge.badge-success
+      span.d-block.text-truncate Create #{txData.dateCreate} // #{txData.reportStat} #{txData.dateConfirm}
+    .dash-lastMeasur
+      .lastMeasur.card
+        #lastMeasur-picHR.lastMeasur-pic
+        div
+          div
+            span.h4 #{txData.rawHR}
+            span bpm
+          div
+            span HEART RATE
+          span(class="badge #{styleHR}") #{txData.diagHR}
+      .lastMeasur.card
+        #lastMeasur-picBP.lastMeasur-pic
+        div
+          div
+            span.h4 #{txData.rawSys}
+            span.h6 /#{txData.rawDia}
+          div
+            span BLOOD PRESSURE
+          span(class="badge #{styleBP}") #{txData.diagBP}
+      .lastMeasur.card
+        #lastMeasur-picTemp.lastMeasur-pic
+        div
+          div
+            span.h4 #{txData.rawTemp}
+            span
+              | °C
+              br
+          div
+            span TEMPERATURE
+          span(class="badge #{styleTemp}") #{txData.diagTemp}
+    span.modal-summary Details
+    form(method='POST', action='/dash/#{userID}/tx/#{txData.reportID}/')
+      .table-responsive.modal-table
+        table.table
+          tbody.modal-table
+            tr
+              td.modal-table-topic Symptom Detail
+              td.modal-table-detail
+                if txData.userType == 'Physician'
+                  span#modal-symptDetail.text-right #{txData.symptDetail}
+                if txData.userType == 'Patient'
+                  input#modal-symptDetail.form-control.text-right(type='text', name='symptDetail', value='#{txData.symptDetail}')
+            tr
+              td.modal-table-topic Prescription
+              td.modal-table-detail
+                if txData.userType == 'Physician'
+                  span#modal-prescript.text-right #{txData.prescript}
+                if txData.userType == 'Patient'
+                  input#modal-prescript.form-control.text-right(type='text', name='prescript', value='#{txData.prescript}')
+            tr
+              td.modal-table-topic Special Note
+              td.modal-table-detail
+                if txData.userType == 'Physician'
+                  span#modal-note.text-right #{txData.specialNote}
+                if txData.userType == 'Patient'
+                  input#modal-note.form-control.text-right(type='text', name='specialNote', value='#{txData.specialNote}')
+      if txData.userType == 'Patient'
+        button.btn.btn-primary(type='submit') EDIT
+      if txData.userType == 'Phamarcy'
+        button.btn.btn-primary(type='submit') DONE

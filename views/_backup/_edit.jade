@@ -1,0 +1,51 @@
+extends layout
+
+block edit
+ div(align='center')
+  label Name： #{data.PatientFirstname}  #{data.PatientLastname}
+    hr
+    form(method='POST' action='/update')
+      input(type="hidden" name="PatientID" value=data.userID)
+      table.list-edit
+        tr
+          th userID
+          td #{data.userID}
+        tr
+          th userType
+          td
+            input(type="text" name="userType" value=data.userType).text
+        tr
+          th Firstname
+          td 
+            input(type="text" name="Firstname" value=data.nameFst).text
+        tr
+          th Lastname
+          td
+            input(type="text" name="Lastname" value=data.nameLst).text
+        tr
+          td(colspan="2")
+            button(type="submit").btn Submit
+            button(type="button" onclick="javascript: location.href='/'; ").btn Back
+  div(align='center')
+   label Total： #{txData.length}
+   hr
+   a(href="/add", title="title").btn Add
+   table.list
+     thead
+       tr
+         th txID
+         th txStat
+         th userFrom
+         th dateCreate
+         th
+     each item in txData
+       tr
+         td= item.txID
+         td= item.txStat
+         td= item.txData
+         td= item.dateCreate
+         td
+           a(href="/edit/#{item.txID}", title="Edit").icon
+             i(aria-hidden="true").fa.fa-pencil-square
+           a(href="/delete/#{item.txID}", title="Delete" onclick="return confirm('Delete user： #{data.NameFst} ?');").icon
+             i(aria-hidden="true").fa.fa-trash

@@ -1,0 +1,81 @@
+.login {
+  background-color:rgba(33,75,183,0.85);
+  height:100vh;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  align-content:center;
+}
+
+.login-logo {
+  background-image:url("../../assets/img/logo-team.svg");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:contain;
+  width:160px;
+  height:40px;
+}
+
+.login-line {
+  background-color:rgba(255,255,255,0.25);
+  width:2px;
+  height:200px;
+  margin-left:20px;
+}
+
+@media (max-width: 575px) {
+  .login-line {
+    width:100vw;
+    height:2px;
+    margin:30px 40%;
+  }
+}
+
+.login-form {
+  margin:auto 12px;
+  width:300px;
+  max-width:320px;
+  height:300px;
+  padding:0px 25px;
+}
+
+.login form .form-control {
+  border:none;
+  border-radius:10px;
+  background:rgba(255,255,255,.1);
+  display:block;
+  margin:15px 0px;
+}
+
+.login ::-webkit-input-placeholder {
+  color:rgba(255,255,255,0.25);
+}
+
+.login ::-moz-placeholder {
+  color:rgba(255,255,255,0.25);
+}
+
+.login :-ms-input-placeholder {
+  color:rgba(255,255,255,0.25);
+}
+
+.tab-link {
+  padding:15px 15px;
+  border:none;
+  color:rgba(255,255,255,0.5);
+  margin:0px;
+}
+
+.tab-link.active {
+  padding:5px 15px;
+  font-weight:600;
+  border-bottom:2px solid transparent;
+  border-color:#007bff;
+  color:#FFF;
+}
+
+#tab-signup {
+  display:none;
+}
+

@@ -1,0 +1,28 @@
+extends layout
+
+block add
+ div(align='center')
+  label Create
+  hr
+  form(method='POST' action='/add')
+    table.list-edit
+      tr
+        th PatientID
+        td
+          input(type="text" name="PatientID").text
+      tr
+        th PatientRoom
+        td
+          input(type="text" name="PatientRoom").text
+      tr
+        th PatientFirstname
+        td 
+          input(type="text" name="PatientFirstname").text
+      tr
+        th PatientLastname
+        td
+          input(type="text" name="PatientLastname").text
+      tr
+        td(colspan="2")
+          button(type="submit").btn Submit
+          button(type="button" onclick="javascript: location.href='/'; ").btn Back

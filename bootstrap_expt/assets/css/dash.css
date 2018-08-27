@@ -1,0 +1,139 @@
+.dash {
+  background-color:rgba(33,75,183,0.9);
+  height:100%;
+  padding:0 5%;
+}
+
+.dash-top {
+  text-align:right;
+  padding-top:10px;
+  margin-bottom:0px;
+}
+
+.user_id {
+  font-weight:600;
+}
+
+.user-id.card {
+  display:inline-block;
+  padding:5px 15px;
+}
+
+.user-logout {
+  font-weight:800;
+  margin-left:20px;
+}
+
+.dash-flexWarp {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.dash-subFlex {
+  padding-right:25px;
+}
+
+.dash-profBorder {
+  background-color:#FFF;
+  border-radius:100%;
+  padding:3px;
+  height:100px;
+  margin-right:20px;
+  width:100px;
+}
+
+.dash-profPic {
+  border-radius:100%;
+  background-size:cover;
+  background-position:center;
+  height:100%;
+  width:100%;
+}
+
+.dash-name {
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:28px;
+  margin-right:20px;
+}
+
+.dash-age {
+  margin-right:8px;
+}
+
+.dash-topic {
+  font-weight:600;
+  font-size:20px;
+}
+
+.dash-subTopic {
+  font-weight:800;
+}
+
+.dash-appoint {
+  max-width:260px;
+  height:100%;
+}
+
+@media (max-width: 767px) {
+  .dash-appoint {
+    max-width:100%;
+    width:100%;
+  }
+}
+
+.appt-topic {
+  font-weight:600;
+}
+
+.table-breakWord {
+  max-width:89px;
+  word-break:break-word;
+}
+
+.dash-report {
+  display:flex;
+  flex:1;
+  max-width:100%;
+}
+
+@media (max-width: 767px) {
+  .dash-report {
+    display:block;
+  }
+}
+
+.dash-detail {
+  width:100%;
+}
+
+.btn.btn-primary.dash-reportBtnAdd {
+  float:right;
+  margin-bottom:10px;
+}
+
+.dash-detail {
+  flex:1;
+}
+
+.lastMeasur-pic {
+  width:70px;
+  height:60px;
+  background-size:55%;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+.report-detail-pic {
+  background-color:#FFF;
+  border-radius:100%;
+  padding:3px;
+  height:50px;
+  margin-right:10px;
+  width:50px;
+}
+
+#btnAddAppt, #btnAdd {
+  display:none;
+}
+

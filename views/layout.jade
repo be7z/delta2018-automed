@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title AutoMED
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i')
+    link(rel='stylesheet', href='/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/assets/css/dash.css')
+    link(rel='stylesheet', href='/assets/css/getPatient.css')
+    link(rel='stylesheet', href='/assets/css/login.css')
+    link(rel='stylesheet', href='/assets/css/modal.css')
+    link(rel='stylesheet', href='/assets/css/navbar.css')
+    link(rel='stylesheet', href='/assets/css/styles.css')
+
+  body
+    case route
+      when 'login': block login
+      when 'dash': block dash
+      when 'tx': block tx
+      when 'add': block add
+      default: block login
+
+  script(src='/assets/js/jquery.min.js')
+  script(src='/assets/bootstrap/js/bootstrap.bundle.min.js')
+  script(src='/assets/js/dash.js')
+  script(src='/assets/js/login.js')
+  script(src='/assets/js/modal.js')

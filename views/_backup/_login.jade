@@ -1,0 +1,17 @@
+extends layout
+
+block login
+  div(align='center')
+    label Total： #{data.length}
+  .login-clean
+    form(method='post', style='background-color:rgba(255,255,255,0.8);')
+      h2.sr-only Login Form
+      .illustration
+        i.icon.ion-ios-navigate
+      .form-group
+        input.form-control(type='username', name='userID', placeholder='User ID', value=180001)
+      .form-group
+        input.form-control(type='password', name='userPass', placeholder='Password')
+      .form-group
+        button.btn.btn-primary.btn-block(type='submit', style='background-color:rgb(71,109,244);') Log In
+      a.forgot(href='#') Forgot your email or password?

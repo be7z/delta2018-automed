@@ -1,0 +1,48 @@
+doctype html
+html
+ head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title AutoMED -- Login
+  link(href='/stylesheets/styles.css', rel='stylesheet')
+  link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
+  link(href='/stylesheets/Login-Form-Clean.css', rel='stylesheet')
+  link(href='/fonts/ionicons.min.css', rel='stylesheet')
+  link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600", rel="stylesheet")
+  link(href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css", rel="stylesheet")
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+
+ body
+  section#hero
+    nav.navbar.navbar-light.navbar-expand-md
+      .container-fluid
+        a.navbar-brand(href='#')
+        button.navbar-toggler(data-toggle='collapse', data-target='#navcol-1')
+          span.sr-only Toggle navigation
+          span.navbar-toggler-icon
+        #navcol-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.mx-auto
+            li.nav-item(role='presentation')
+              a.nav-link.active(href='#') Block Explorer
+            li.nav-item(role='presentation')
+              a.nav-link(href='#', style='color:#000000;') FAQ
+            li.nav-item(role='presentation')
+              a.nav-link(href='#', style='color:#000000;') About Us
+          ul.nav.navbar-nav.ml-auto
+            li.nav-item(role='presentation')
+              a.nav-link.active(href='#') Login
+            li.nav-item(role='presentation')
+              a.nav-link(href='#', style='color:#000000;') Registration
+
+    h1#title.text-center #{route}
+    h2#subtitle.text-center Patient Moitoring System
+
+    case route
+      when 'home': block home
+      when 'add': block add
+      when 'edit': block edit
+      when 'login': block login
+      default: block login
+
+  script(src='/js/jquery.min.js')
+  script(src='/bootstrap/js/bootstrap.min.js')
+  script(src='https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js')

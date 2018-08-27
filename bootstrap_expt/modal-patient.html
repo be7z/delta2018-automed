@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>automed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/css/dash.css">
+    <link rel="stylesheet" href="assets/css/getPatient.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="width:100%;background-image:url(&quot;none&quot;);padding:0;height:100%;">
+    <div id="target" class="modal-content">
+        <div><span class="close">X</span>
+            <div>
+                <p class="modal-topheader">#{txData.reportTopic}</p>
+                <p class="modal-header">by #{txData.physNameTitle} #{txData.physNameFirst} #{txData.physNameLast}</p>
+            </div>
+        </div>
+        <div class="modal-well text-truncate"><strong>Report ID&nbsp;</strong><span>#{txData.reportID}</span></div>
+        <div class="badge badge-success"><span>Create #{txData.dateCreate} // #{txData.reportStat} #{txData.dateConfirm}</span></div>
+        <div class="dash-lastMeasur">
+            <div class="lastMeasur card">
+                <div id="lastMeasur-picHR" class="lastMeasur-pic"></div>
+                <div>
+                    <div><span class="h4">#{txData.rawHR}</span><span>bpm</span></div><span>HEART RATE</span>
+                    <div><span id="diagHR" class="badge badge-diag">{txData.diagHR}</span></div>
+                </div>
+            </div>
+            <div class="lastMeasur card">
+                <div id="lastMeasur-picBP" class="lastMeasur-pic"></div>
+                <div>
+                    <div><span class="h4">#{txData.rawSys}</span><span class="h6">/#{txData.rawDia}</span></div>
+                    <div><span>BLOOD PRESSURE</span></div><span id="diagBP" class="badge badge-diag">#{txData.diagBP}</span></div>
+            </div>
+            <div class="lastMeasur card">
+                <div id="lastMeasur-picTemp" class="lastMeasur-pic"></div>
+                <div>
+                    <div><span class="h4">#{txData.rawTemp}</span><span>°C<br></span></div>
+                    <div><span>TEMPERATURE</span></div>
+                    <div class="badge"><span id="diagTemp" class="badge badge-diag">#{txData.diagTemp}</span></div>
+                </div>
+            </div>
+        </div><span class="modal-summary">Details</span>
+        <div class="table-responsive modal-table">
+            <table class="table">
+                <tbody class="modal-table">
+                    <tr>
+                        <td class="modal-table-topic">Symptom Detail</td>
+                        <td class="modal-table-detail"><span id="modal-sympt" class="text-right">#{txData.symptDetail}</span></td>
+                    </tr>
+                    <tr>
+                        <td class="modal-table-topic">Prescription</td>
+                        <td class="modal-table-detail"><span id="modal-prescript" class="text-right">#{txData.prescript}</span></td>
+                    </tr>
+                    <tr>
+                        <td class="modal-table-topic">Special Note</td>
+                        <td class="modal-table-detail"><span id="modal-note" class="text-right">#{txData.specialNote}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><button class="btn btn-primary" type="submit">EDIT</button></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dash.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/modal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+extends layout
+
+block add
+  #target.modal-content
+    form(method='POST', action='/dash/#{userID}/addtx/')
+      div
+        span.close X
+        div
+          p.modal-topheader Create Report
+      input#create-topic.form-control(name='reportTopic', type='text', placeholder='Report Topic')
+      span.modal-summary For Patient ID
+      #div-patientTarget.div-patient
+        .div-patient
+          .input-patientID
+            input#create-patientID.form-control(name='patientID', type='text', placeholder='Patient ID')
+            button#btn-checkPatient.btn.btn-primary(type='submit') Check
+          #div-getPatientData
+            strong
+              span.d-block Patient Name: # {patient.nameTitle} # {patient.nameFirst} # {patient.nameLast}
+            span.d-block Age: # {patient.age} (Gender: # {patient.gender})
+            span.d-block Allergies: # {patient.allergies}
+      button.btn.btn-primary(type='submit') ADD

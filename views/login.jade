@@ -1,0 +1,18 @@
+extends layout
+
+block login
+  .login
+    .login-logo
+    .login-line
+    .login-form
+      label#tab-bsin.tab-link.active SIGN IN
+      label#tab-bsup.tab-link SIGN UP
+      form#tab-signin(method='post')
+        input#signin-id.form-control(type='text', name='userID', placeholder='ID')
+        input#signin-pass.form-control(type='password', placeholder='PASSWORD', data-type='password')
+        button#signin-btn.btn.btn-primary.btn-block(type='submit') SIGN IN
+      form#tab-signup(method='post')
+        input#signup-type.form-control(type='text', placeholder='TYPE')
+        input#signup-id.form-control(type='text', placeholder='ID')
+        input#signup-pass.form-control(type='password', placeholder='PASSWORD', data-type='password')
+        button#signup-btn.btn.btn-primary.btn-block(type='button') SIGN UP
